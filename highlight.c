@@ -290,6 +290,16 @@ static struct keyword* is_keyword(const char *key, size_t size)
 }
 
 /**
+ * Resets the internal state of the highlighter.
+ *
+ * This should be called before starting highlighting
+ * of a separate document.
+ */
+void highlight_reset_state() {
+    gs.state = HL_DEFAULT;
+}
+
+/**
  * For a given line @p line and a (already) allocated
  * highlighted line buffer @p hl, highlights the
  * line and returns @p hl with the highlighted line.

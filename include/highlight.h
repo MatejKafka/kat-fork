@@ -95,6 +95,14 @@
 	extern char *highlight_line(const char *line, char *hl, size_t str_size);
 
 	/**
+	 * Resets the internal state of the highlighter.
+	 *
+	 * This should be called before starting highlighting
+	 * of a separate document.
+	 */
+	extern void highlight_reset_state();
+
+	/**
 	 * Initialize the syntax highlight engine.
 	 *
 	 * @param theme_file Theme file, if NULL, will use
